@@ -20,7 +20,7 @@ class LoginScreenState extends State<LoginScreen>  with ValidationMixin
 	{
 		return Container 
 		(
-			margin: EdgeInsets.all(20.0),
+			margin: EdgeInsets.all(50.0),
 			child: Form 
 			(
 				key: formKey,
@@ -28,6 +28,12 @@ class LoginScreenState extends State<LoginScreen>  with ValidationMixin
 				(
 					children: 
 					[
+						Container(margin: EdgeInsets.only(bottom: 55.0)),
+						Text
+						(
+							"Login",							
+							style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+						),
 						Container(margin: EdgeInsets.only(bottom: 25.0)),
 						emailField(),
 						Container(margin: EdgeInsets.only(bottom: 10.0)),
@@ -81,7 +87,11 @@ class LoginScreenState extends State<LoginScreen>  with ValidationMixin
 		return RaisedButton 
 		(
 			color: Colors.blue,
-			child: Text("Submit"),
+			child: Text
+			(
+				"Submit",
+				style: TextStyle(fontSize: 20, color: Colors.white),
+			),
 			onPressed: () 
 			{
 				if (formKey.currentState.validate())
